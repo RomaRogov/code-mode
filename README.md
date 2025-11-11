@@ -1,4 +1,4 @@
-# @utcp/code-mode
+# Code Mode
 
 [![npm](https://img.shields.io/npm/v/@utcp/code-mode)](https://www.npmjs.com/package/@utcp/code-mode)
 
