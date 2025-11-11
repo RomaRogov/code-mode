@@ -31,7 +31,7 @@ Connecting many MCP servers quickly overloads the context window and increases l
 Code Mode flips this model:
 
 1. The LLM gets a single tool: **`execute_code`**
-2. It writes JS/TS that calls your MCP pr UTCP endpoints 
+2. It writes JS/TS that calls your MCP or UTCP endpoints 
 3. A lightweight HTTP proxy forwards requests 
 4. Results flow back through the execution environment
 
