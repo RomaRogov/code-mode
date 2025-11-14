@@ -1,7 +1,7 @@
 <div align="center">
 <!-- <img alt="utcp code mode banner" src="https://github.com/user-attachments/assets/77723130-ecbc-4d1d-9e9b-20f978882699" width="80%" style="margin: 20px auto;"> -->
 
-<h1 align="center">🤖 Code Mode UTCP: First plug-and-play Code Mode library</h1>
+<h1 align="center">🤖 Code-Mode Library: First library for tool calls via code execution</h1>
 <p align="center">
     <a href="https://github.com/universal-tool-calling-protocol">
         <img src="https://img.shields.io/github/followers/universal-tool-calling-protocol?label=Follow%20Org&logo=github" /></a>
@@ -14,8 +14,6 @@
 </p>
 </div>
 
-
-> **Enable tool call via code execution locally.**  
 > Transform your AI agents from clunky tool callers into efficient code executors — in just 3 lines.
 
 ## Why This Changes Everything
