@@ -65,6 +65,19 @@ Create a `.utcp_config.json` file to configure your tools and services:
 }
 ```
 
+### Enabling CLI Support
+
+**Important:** CLI protocol support is **disabled by default** for security reasons. To enable CLI tool execution, you need to explicitly register the CLI plugin in 'index.ts'.
+
+```typescript
+import { register as registerCli } from "@utcp/cli";
+
+// Enable CLI support
+registerCli();
+```
+
+**Security Note:** Only enable CLI if you trust the code that will be executed, as CLI tools can execute arbitrary commands on your system.
+
 ## 🛠️ Available MCP Tools
 
 The bridge exposes these MCP tools for managing your UTCP Code Mode ecosystem:
@@ -81,11 +94,13 @@ The bridge exposes these MCP tools for managing your UTCP Code Mode ecosystem:
 
 The Universal Tool Calling Protocol (UTCP) allows you to:
 - **Connect to any API** via HTTP, OpenAPI specs, or custom formats
-- **Use command-line tools** with automatic argument parsing
+- **Use command-line tools** with automatic argument parsing (requires explicit CLI plugin registration)
 - **Process text and files** with built-in utilities
 - **Chain and combine** multiple tools seamlessly
 
 With this MCP bridge, all your UTCP tools become available in Claude Desktop and other MCP clients.
+ 
+**Optional Protocols:** CLI requires explicit registration for security (see "Enabling CLI Support" above).
 
 ## 💻 Code Mode Example
 
