@@ -281,16 +281,14 @@ Remember: The power of this system comes from combining multiple tools in sophis
             } else if (ContentBlockSchema.safeParse(result).success) {
                 content.push(result as ContentBlock);
                 mcpContentFound = true;
-            }
             // Case 3: result is not a content block - it's either text or structured data or not MCP content at all
-            if (!mcpContentFound) {
-                const plainContent: any = processedResult.length > 1 ? processedResult : processedResult[0];
-                const jsonContent: string = JSON.stringify({ success: true, result: plainContent, logs });
-                return { content: [{ type: "text", text: truncateText(jsonContent) }] };
             } else {
-                // Add logs as a separate text block if there is MCP content
-                content.push({ type: "text", text: truncateText(JSON.stringify({ success: true, logs })) });
+                processedResult.push(result);
             }
+            
+            const plainContent: any = processedResult.length > 1 ? processedResult : processedResult[0];
+            const jsonContent: string = JSON.stringify({ success: true, nonMcpContentResults: plainContent, logs });
+            content.push({ type: "text", text: truncateText(jsonContent) });
 
             return { content: content };
         } catch (e: any) {
